@@ -1,0 +1,12 @@
+Django==1.10b1
+Pillow==3.2.0
+argparse==1.2.1
+distribute==0.6.24
+django-ckeditor==5.0.3
+pluggy==0.3.1
+py==1.4.31
+pytz==2016.4
+selenium==2.53.5
+tox==2.3.1
+virtualenv==15.0.2
+wsgiref==0.1.2

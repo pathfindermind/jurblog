@@ -1,0 +1,10 @@
+{% extends 'jurblog/index.html' %}
+
+{% block content %}
+<div class="blog-post">
+  <a href="{{ entry.get_absolute_url }}">
+  <h2 class="blog-post-title">{{ entry.title }}</h2></a>
+  <p class="blog-post-meta">{{ entry.published_at|date:"Y/M/d" }}</p>
+  <p>{{ entry.body }}</p>
+</div><!-- /.blog-post -->
+{% endblock %}
