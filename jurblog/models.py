@@ -3,7 +3,6 @@
 from datetime import datetime
 from django.db import models
 from ckeditor.fields import RichTextField
-from ckeditor_uploader.fields import RichTextUploadingField
 
 
 
@@ -36,8 +35,8 @@ class NewsEntry(models.Model):
     title = models.CharField(u'Заголовок', max_length=50)
     slug = models.SlugField(u'ЧПУ')
     image = models.ImageField(u'Изображение', upload_to='img/', blank=True)
-    tease = models.RichTextUploadingField(blank=True, default='')
-    body = models.TextField()
+    tease = RichTextField(blank=True, default='')
+    body = RichTextField()
     draft = models.BooleanField(u'В черновики', default=False)
     created_at = models.DateTimeField(u'Дата создания', default=datetime.now)
     published_at = models.DateTimeField(u'Дата публикации', default=datetime.now)
